@@ -1,0 +1,1030 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background-color: #24252a; */
+    background-color: none;
+}
+nav {
+    width: 80%;
+    margin: 0 auto;
+    /* background: #fff; */
+    padding: 50px 0;
+    /* box-shadow: 0px 5px 0px #dedede; */
+  }
+  nav ul {
+    list-style: none;
+    text-align: center;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+  }
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all .5s;
+  }
+ 
+  nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #0088a9;
+     
+
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+  
+
+li,a,button{
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #ecf0f1;
+    text-decoration: none;
+
+}
+header{
+    position: relative;
+background-color: #cbd3dd;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    display: flex;
+    box-shadow: 0 5px 15px rgba(0, 0, 0,0.06);
+    z-index:999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 200px;
+    margin-top: -205px;
+    
+
+}
+.logo{
+    cursor: pointer;
+    margin-top: -15px;
+ margin-left: -10%;
+}
+.nav_link{
+    list-style: none;
+    position: relative;
+
+
+}
+.nav_link li{
+    display: inline-block;
+    padding: 0 20px;
+
+}
+.nav_link li a{
+    transition: all 0.3s ease 0s;
+}
+.nav_link li a:hover{
+    color: #0088a9;    
+}
+button{
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    background-color: rgba(0, 136, 169, 0.8);
+
+}
+
+#hero{
+    background-image: url("myimage.jpg");
+    height: 120vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top 0 right 10%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start ;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0,0.06);
+
+}
+#hero h4{
+    font-size: 50px;
+padding-bottom: 15px;
+}
+
+#hero h1{
+color: #088178;
+
+
+}
+.ui-btn {
+    --btn-default-bg: rgb(41, 41, 41);
+    --btn-padding: 15px 20px;
+    --btn-hover-bg: rgb(51, 51, 51);
+    --btn-transition: .3s;
+    --btn-letter-spacing: .1rem;
+    --btn-animation-duration: 1.2s;
+    --btn-shadow-color: rgba(0, 0, 0, 0.137);
+    --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+    --hover-btn-color: #FAC921;
+    --default-btn-color: #fff;
+    --font-size: 16px;
+    /* 👆 this field should not be empty */
+    --font-weight: 600;
+    --font-family: Menlo,Roboto Mono,monospace;
+    /* 👆 this field should not be empty */
+  }
+  
+  /* button settings 👆 */
+  
+  .ui-btn {
+    box-sizing: border-box;
+    padding: var(--btn-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--default-btn-color);
+    font: var(--font-weight) var(--font-size) var(--font-family);
+    background: var(--btn-default-bg);
+    border: none;
+    cursor: pointer;
+    transition: var(--btn-transition);
+    overflow: hidden;
+    box-shadow: var(--btn-shadow);
+  }
+  
+  .ui-btn span {
+    letter-spacing: var(--btn-letter-spacing);
+    transition: var(--btn-transition);
+    box-sizing: border-box;
+    position: relative;
+    background: inherit;
+  }
+  
+  .ui-btn span::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    background: inherit;
+  }
+  
+  .ui-btn:hover, .ui-btn:focus {
+    background: var(--btn-hover-bg);
+  }
+  
+  .ui-btn:hover span, .ui-btn:focus span {
+    color: var(--hover-btn-color);
+  }
+  
+  .ui-btn:hover span::before, .ui-btn:focus span::before {
+    animation: chitchat linear both var(--btn-animation-duration);
+  }
+  
+  @keyframes chitchat {
+    0% {
+      content: "#";
+    }
+  
+    5% {
+      content: ".";
+    }
+  
+    10% {
+      content: "^{";
+    }
+  
+    15% {
+      content: "-!";
+    }
+  
+    20% {
+      content: "#$_";
+    }
+  
+    25% {
+      content: "№:0";
+    }
+  
+    30% {
+      content: "#{+.";
+    }
+  
+    35% {
+      content: "@}-?";
+    }
+  
+    40% {
+      content: "?{4@%";
+    }
+  
+    45% {
+      content: "=.,^!";
+    }
+  
+    50% {
+      content: "?2@%";
+    }
+  
+    55% {
+      content: "\;1}]";
+    }
+  
+    60% {
+      content: "?{%:%";
+      right: 0;
+    }
+  
+    65% {
+      content: "|{f[4";
+      right: 0;
+    }
+  
+    70% {
+      content: "{4%0%";
+      right: 0;
+    }
+  
+    75% {
+      content: "'1_0<";
+      right: 0;
+    }
+  
+    80% {
+      content: "{0%";
+      right: 0;
+    }
+  
+    85% {
+      content: "]>'";
+      right: 0;
+    }
+  
+    90% {
+      content: "4";
+      right: 0;
+    }
+  
+    95% {
+      content: "2";
+      right: 0;
+    }
+  
+    100% {
+      content: "";
+      right: 0;
+    }
+  }
+/* Let's style the wrapper in such away that, 
+it should always be at the center of the browser */
+.wrapper{
+	position: absolute;
+	/* top: 85%; */
+	left: 16%;
+    
+	transform: translate(-50%,-50%);
+}
+
+/* Style the Un-order list by setting its list-style to none */
+.wrapper ul{
+	list-style: none;
+   
+}
+
+/* Style the list items inside the UL list, by setting its width, height and line-height 
+  and float them to left and set its border and border-radius.
+ */
+.wrapper ul li{
+	width: 75px;
+	height: 75px;
+	line-height: 75px;
+	margin: 0 10px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 50%;
+	border: 5px solid #fff;
+	float: left;
+	transition: all 0.5s ease;
+}
+
+/* Style the icons by setting its color and margin-top value to 20px 
+to align it properly */
+.wrapper ul li .fa{
+	color: #fff;
+	margin-top: 20px;
+	transition: all 0.5s ease;
+}
+
+/* Here I'm going to use the nth-child pseudo element to target the list items 
+  one by one specifically and use box-shadow effect to border and text-shadow effect
+  to icons for glowing effect and use transition property for smooth transition effect. */
+/*facebook*/
+.wrapper ul li:hover:nth-child(1){
+	border: 5px solid  #3b5998;
+	box-shadow: 0 0 15px  #3b5998;
+	transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-facebook{
+	color: #3b5998;
+	text-shadow: 0 0 15px #3b5998;
+	transition: all 0.5s ease;
+}
+
+/*twitter*/
+.wrapper ul li:hover:nth-child(2){
+	border: 5px solid  #00aced;
+	box-shadow: 0 0 15px  #00aced;
+	transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-twitter{
+	color: #00aced;
+	text-shadow: 0 0 15px #00aced;
+	transition: all 0.5s ease;
+}
+
+/* instagram */
+.wrapper ul li:hover:nth-child(3){
+	border: 5px solid #bc2a8d;
+	box-shadow: 0 0 15px #bc2a8d;
+	transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-instagram{
+	color:#bc2a8d;
+	text-shadow: 0 0 15px #bc2a8d;
+	transition: all 0.5s ease;
+}
+
+/* google */
+.wrapper ul li:hover:nth-child(4){
+	border: 5px solid  #dd4b39;
+	box-shadow: 0 0 15px  #dd4b39;
+	transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-google{
+	color: #dd4b39;
+	text-shadow: 0 0 15px  #dd4b39;
+	transition: all 0.5s ease;
+}
+
+
+/* whatsapp */
+.wrapper ul li:hover:nth-child(5){
+	border: 5px solid  #4dc247;
+	box-shadow: 0 0 15px  #4dc247;
+	transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-whatsapp{
+	color: #4dc247;
+	text-shadow: 0 0 15px  #4dc247;
+	transition: all 0.5s ease;
+}
+/* abiut me section start */
+/* #about_me{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+}
+.img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute; */
+/* } */
+/* .container{
+} */
+
+.profile {
+  padding: 5rem 0;
+/* margin-left: 44%; */
+}
+
+.profile::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.profile-image {
+  float: left;
+  width: calc(33.333% - 1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3rem;
+
+}
+
+.profile-image img {
+  border-radius: 50%;
+}
+.ratting {
+  float:left;
+}
+.star:before {
+  content: "\2606";
+}
+
+.star.active:before  {
+  color: yellow;
+  content: "\2605";
+}
+
+.profile-user-settings,
+.profile-stats,
+.profile-bio {
+    float: left;
+    width: calc(66.666% - 2rem);
+}
+
+.profile-user-settings {
+    margin-top: 1.1rem;
+}
+
+.profile-user-name {
+    display: inline-block;
+    font-size: 3.2rem;
+    font-weight: 300;
+}
+#btt{
+  padding: 0 38.4 px;
+  margin-left: 32px;
+  /* margin-top: -15px; */
+}
+/* .profile-edit-btn {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    border: 0.1rem solid #dbdbdb;
+    border-radius: 0.3rem;
+    padding: 0 2.4rem;
+    margin-left: 2rem;
+} */
+/* 
+.profile-settings-btn {
+    font-size: 2rem;
+    margin-left: 1rem;
+} */
+
+.profile-stats {
+    margin-top: 2.3rem;
+}
+/* .pro-container{
+  position: relative;
+} */
+.profile-stats li {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-right: 4rem;
+    cursor: pointer;
+    color: black;
+
+}
+
+.profile-stats li:last-of-type {
+    margin-right: 0;
+}
+
+.profile-bio {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 2.3rem;
+}
+
+.profile-real-name,
+.profile-stat-count,
+.profile-edit-btn {
+    font-weight: 600;
+}
+/* projects */
+#product1 h2{
+  font-size: 50px;
+}
+
+#product1 .pro-container{
+  display:flex;
+  justify-content:space-around;
+  padding-top:20px;
+  flex-wrap:wrap;
+}
+#product1{
+  text-align: center;
+background-color: #cbd3dd;
+}
+#product1 .pro{
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border:1px solid #cce7d0 ;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0,0.02);
+  margin:15px 0 ;
+  transition: 0.2s ease;
+  position:relative;
+  background-color: white;
+  border-radius: 25px;
+}
+#product1 .pro:hover{
+  box-shadow: 20px 20px 30px rgba(0, 0, 0,0.06);
+  cursor: pointer;
+}
+#product1 .pro img{
+width: 100%;
+border-radius: 20px;
+}
+#product1 .pro .des{
+  text-align: start;
+  padding: 10px 0;
+}
+#product1 .pro .des span{
+  color: #606063;
+  font-size: 12px;
+
+}
+#product1 .pro .des h6{
+  padding-top: 7px;
+  color:#1a1a1a;
+  font-size: 14px;
+}
+#product1 .pro .des i{
+  font-size: 12px ;
+  color: rgb(243, 181, 25);
+}
+#product1 .pro .des h4{
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #088178;
+}
+#product1 .pro .cart{
+  width: 40px;
+  height: 40px;
+  line-height:40px;
+  border-radius:50px;
+  background-color:#e8f6ea;
+  color:#088178;
+  border: 1px solid #cce7d0;
+  position:absolute;
+  bottom: 20px;
+  right:10px;
+}
+/* #feature .fe-box:nth-child(5) h6 {
+  background: color #f6dbf6;;
+  
+}
+#feature .fe-box:nth-child(6) h6 {
+  background-color:#fff2e5;
+  
+} */
+/* contact */
+
+
+.cont{
+  width: 100%;
+  height: 90vh;
+  /* background-color: #77a7b4; */
+  position: relative;}
+  /* display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding:50px 50px; */
+/* }
+.con .heading1{
+  font-size: 50px;
+  color: black;
+  font-weight: 500;
+  /* margin-top: 200px; */
+  /* margin-left: 5%;
+
+}
+.heading1{
+  position: absolute;
+  margin-top: 50px;
+}
+.con .name{
+  position: absolute;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 120PX;
+  margin-left:5% ;
+} */ 
+/* .con .col{
+  font-size: 20px;
+  font-weight: 300;
+  /* color: #4dc247; */
+  /* position: absolute;
+  margin-top: 160PX;
+  margin-left:5% ;
+
+
+}  */
+
+.allenkitasveer{
+  position: absolute;
+  right: 15%;
+
+}
+
+/* .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+} */
+/* .con span{
+  position: absolute;
+  margin-top: 160px;
+}
+.con .col{
+  position: absolute;
+  margin-top: 160px;
+  margin-left: 5%;
+} */
+
+.heading1{
+  position: absolute;
+  font-size: 50px;
+  margin-left: 30%;
+  margin-top: 40px;
+  font-weight: 100;
+}
+.name{
+  position: absolute;
+  font-size: 30px;
+  margin-left: 30%;
+  margin-top: 100px;
+  font-weight: 100;
+ }
+ #contact h6{
+  position: absolute;
+  font-size: 20px;
+  
+  margin-left: 30%;
+  margin-top: 150px;
+  font-weight: 100;
+ }
+.green{
+  font-weight:900 ;
+}
+  /*
+.name1{
+  position: absolute;
+  font-size: 30px;
+  margin-left: 630px;
+  margin-top: 100px;
+  font-weight: 100;
+}
+.green{
+  position: absolute;
+  color: #67b169;
+  margin-left: 630px;
+  font-size: 20px;
+  margin-top: 50px;
+}
+.greenkasamna{
+  position: absolute;
+  margin-left: 30%; */
+  /* margin-top: 250px; */
+/* } */
+/* .allenkitasveer{
+  margin-left: 65%;
+  margin-top: -90%;
+}
+.allenabout1{
+  color: gray;
+
+  margin-left:400px ;
+  font-size: 20px;
+  margin-top: -400px;
+}
+
+.allenabout2{
+  color: gray;
+
+  margin-left:400px ;
+  font-size: 20px;
+} */
+/* .contant{
+  position: absolute;
+  margin-left: -10%;
+}
+.icon {
+  height: 50px;
+  width: 50px;
+  border: 3px solid white;
+  border-radius: 50%;
+  text-align: center;
+  /* text-align: start; */
+  /* color: white;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 65px;
+  margin-right: 10px;
+  z-index: 10;
+  -moz-box-shadow: 4px 0px 20px rgba(68, 68, 68, 0.4);
+  -webkit-box-shadow: 4px 0px 20px rgba(68, 68, 68, 0.4);
+  box-shadow: 4px 0px 20px rgba(68, 68, 68, 0.4);
+  cursor:pointer;
+}
+
+.facebook .background_circle {
+  display: none;
+  width: 52px;
+  height: 54px;
+  position: absolute;
+  border-radius: 50%; */
+  /* top: 0;
+  left: 1; */
+  /* margin-left: 100px;
+  z-index: -1;
+  background-color: #3B5998;
+} */
+
+.twitter .background_circle {
+  display: none;
+  width: 52px;
+  height: 54px;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 1;
+  z-index: -1;
+  background-color: #55acee;
+}
+
+.instagram .background_circle {
+  display: none;
+  width: 52px;
+  height: 54px;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 1;
+  z-index: -1;
+  background-color: #cd486b;
+}
+
+.pinterest .background_circle {
+  display: none;
+  width: 52px;
+  height: 54px;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 1;
+  z-index: -1;
+  background-color: #cb2027;
+}
+
+.facebook:hover,
+.facebook:active {
+  background-color: #3B5998;
+}
+
+.twitter:hover,
+.twitter:active {
+  background-color: #55acee;
+}
+
+.instagram:hover,
+.instagram:active {
+  background-color: #cd486b;
+}
+
+.pinterest:hover,
+.pinterest:active {
+  background-color: #cb2027;
+} 
+
+/* body {
+} */
+
+body {
+  background-color: #D5D5D5;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+  border: 3px solid white;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 65px;
+  margin-right: 10px;
+  z-index: 10;
+  -moz-box-shadow: 4px 0px 20px rgba(68, 68, 68, 0.4);
+  -webkit-box-shadow: 4px 0px 20px rgba(68, 68, 68, 0.4);
+  box-shadow: 4px 0px 20px rgba(68, 68, 68, 0.4);
+  cursor:pointer;
+}
+
+.facebook .background_circle {
+  display: none;
+  width: 52px;
+  height: 54px;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 1;
+  z-index: -1;
+  background-color: #3B5998;
+}
+
+.twitter .background_circle {
+  display: none;
+  width: 52px;
+  height: 54px;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 1;
+  z-index: -1;
+  background-color: #55acee;
+}
+
+.instagram .background_circle {
+  display: none;
+  width: 52px;
+  height: 54px;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 1;
+  z-index: -1;
+  background-color: #cd486b;
+}
+
+.pinterest .background_circle {
+  display: none;
+  width: 52px;
+  height: 54px;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 1;
+  z-index: -1;
+  background-color: #cb2027;
+}
+
+.facebook:hover,
+.facebook:active {
+  background-color: #3B5998;
+}
+
+.twitter:hover,
+.twitter:active {
+  background-color: #55acee;
+}
+
+.instagram:hover,
+.instagram:active {
+  background-color: #cd486b;
+}
+
+.pinterest:hover,
+.pinterest:active {
+  background-color: #cb2027;
+}
+#box{
+  background-color: #D5D5D5;
+}
+/* 
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+  border: 3px solid white;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 65px;
+  margin-right: 10px;
+  z-index: 10;
+  -moz-box-shadow: 4px 0px 20px rgba(68, 68, 68, 0.4);
+  -webkit-box-shadow: 4px 0px 20px rgba(68, 68, 68, 0.4);
+  box-shadow: 4px 0px 20px rgba(68, 68, 68, 0.4);
+  cursor:pointer;
+}
+
+.facebook .background_circle {
+  display: none;
+  width: 52px;
+  height: 54px;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 1;
+  z-index: -1;
+  background-color: #3B5998;
+}
+
+.twitter .background_circle {
+  display: none;
+  width: 52px;
+  height: 54px;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 1;
+  z-index: -1;
+  background-color: #55acee;
+}
+
+.instagram .background_circle {
+  display: none;
+  width: 52px;
+  height: 54px;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 1;
+  z-index: -1;
+  background-color: #cd486b;
+}
+
+.pinterest .background_circle {
+  display: none;
+  width: 52px;
+  height: 54px;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 1;
+  z-index: -1;
+  background-color: #cb2027;
+}
+
+.facebook:hover,
+.facebook:active {
+  background-color: #3B5998;
+}
+
+.twitter:hover,
+.twitter:active {
+  background-color: #55acee;
+}
+
+.instagram:hover,
+.instagram:active {
+  background-color: #cd486b;
+}
+
+.pinterest:hover,
+.pinterest:active {
+  background-color: #cb2027;
+} 
+*/
+
