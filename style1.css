@@ -832,9 +832,9 @@ border-radius: 20px;
 /* body {
 } */
 
-body {
+/* body {
   background-color: #D5D5D5;
-}
+} */
 
 .content {
   position: absolute;
@@ -1028,3 +1028,342 @@ body {
 } 
 */
 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.title {
+  font-size: 28px;
+  color: royalblue;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.title::before,.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: royalblue;
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+  background-color: royalblue;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message, .signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a {
+  color: royalblue;
+}
+
+.signin a:hover {
+  text-decoration: underline royalblue;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  width: 95%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input:valid + span {
+  color: green;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  background-color: royalblue;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+}
+
+.submit:hover {
+  background-color: rgb(56, 90, 194);
+}
+.submit1 {
+  border: none;
+  outline: none;
+  background-color: royalblue;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+  width: 50%;
+}
+
+.submit1:hover {
+  background-color: rgb(56, 90, 194);
+}
+.btn_cancel1{
+  border: none;
+  outline: none;
+  background-color: rgb(212, 56, 56);
+  padding: 10px;
+  /* border-radius: 10px; */
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+  width: 20%;
+  /* border: 2px solid red; */
+  padding: 10px;
+  margin-left: 260px;
+  margin-top: -20px;
+  /* border-radius: 20px; */
+border-top-right-radius:50px; 
+   border-bottom-left-radius:30px 1px; 
+   border-top-left-radius: 0%;
+   border-top-left-radius: 0;
+  position: absolute;
+
+}
+.btn_cancel{
+  border: none;
+  outline: none;
+  background-color: rgb(212, 56, 56);
+  padding: 10px;
+  /* border-radius: 10px; */
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+  width: 20%;
+  /* border: 2px solid red; */
+  padding: 10px;
+  margin-left: 193px;
+  margin-top: -20px;
+  /* border-radius: 20px; */
+border-top-right-radius:50px; 
+   border-bottom-left-radius:30px 1px; 
+   border-top-left-radius: 0%;
+   border-top-left-radius: 0;
+  position: absolute;
+
+}
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+/* body{
+  background-color: aqua;
+} */
+.form-popup{
+ /* width: 50%; */
+ border-radius: 22px;
+ background: #fff;
+ 
+  /* border: 1px solid black; */
+  margin-top: 20%;
+  margin-left: 40%;
+  display: none;
+position: fixed;
+}
+/* footer */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  text-decoration: none;
+}
+footer{
+  width: 100%;
+  /* position: fixed;
+  bottom: 0;
+  left: 0; */
+  background: #cbd3dd;
+}
+footer .contant{
+  max-width: 1350px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .contant p,a{
+  color: #000;
+}
+footer .contant .box{
+  width: 33%;
+  transition: all 0.4s ease;
+}
+footer .contant .topic{
+  font-size: 22px;
+  font-weight: 600;
+  color: #0088a9;
+  margin-bottom: 16px;
+
+}
+footer .contant p{
+  text-align: justify;
+}
+footer .contant .lower .topic{
+  margin: 24px 0 5px 0;
+}
+footer .contant .lower i{
+  padding-right: 16px;
+}
+footer .contant .middle{
+  padding-left: 80px;
+}
+footer .contant .middle a{
+  line-height: 32px;
+}
+footer .contant .right input[type="text"]{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  color: white;
+  background: #082631;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 2px solid #222222;
+}
+footer .contant .right input[type="submit"]{
+  height: 42px;
+  width: 100%;
+  font-size: 18px;
+  color: #d9d9d9;
+  background: #eb2f06;
+  outline: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 12px;
+  border: 2px solid  rgba(0, 136, 169, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+.contant .right input[type="submit"]:hover{
+  background: none;
+  color:   rgba(0, 136, 169, 0.8);
+}
+footer .contant .media-icons a{
+  font-size: 16px;
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 43px;
+  border-radius: 5px;
+  border: 2px solid #222222;
+  margin: 30px 5px 0 0;
+  transition: all 0.3s ease;
+}
+.contant .media-icons a:hover{
+  border-color:  rgba(0, 136, 169, 0.8);;
+}
+footer .bottom{
+  width: 100%;
+  text-align: right;
+  color: #082631;
+  padding: 0 40px 5px 0;
+}
+footer .bottom a{
+  color:  rgba(0, 136, 169, 0.8);;
+}
+footer a{
+  transition: all 0.3s ease;
+}
+footer a:hover{
+  color:  rgba(0, 136, 169, 0.8);;
+}
+@media (max-width:1100px) {
+  footer .contant .middle{
+    padding-left: 50px;
+  }
+}
+@media (max-width:950px){
+  footer .contant .box{
+    width: 50%;
+  }
+  .contant .right{
+    margin-top: 40px;
+  }
+}
+@media (max-width:560px){
+  footer{
+    position: relative;
+  }
+  footer .contant .box{
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer .contant .middle{
+    padding-left: 0;
+  }
+}

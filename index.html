@@ -22,13 +22,115 @@
             <ul class="nav_link">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#">projects</a></li>
-                <li><a href="#">services</a></li>
+                <li><a href="#project">projects</a></li>
+                <li><a href="#contact">contact</a></li>
                 <!-- <li><a href="#">contact</a></li> -->
             </ul>
         </nav>
-        <a class="cta" href="#"><button>contact</button></a>
+        <a class="cta" href="#"><button onclick="openForm()">sign up</button></a>
     </header>
+     
+    <div class="form-popup" id="myForm">
+        <form class="form">
+        <button type="button" class="btn_cancel" onclick="closeForm()">X</button>
+    
+            <p class="title">Login </p>
+            <!-- <p class="message">Signup now and get full access to our app. </p> -->
+                <!-- <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>Firstname</span>
+                </label>
+        
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>Lastname</span>
+                </label>
+            </div>   -->
+                    
+            <label>
+                <input required="" placeholder="" type="email" class="input">
+                <span>Email</span>
+            </label> 
+                
+            <label>
+                <input required="" placeholder="" type="password" class="input">
+                <span>Password</span>
+            </label>
+            <!-- <label>
+                <input required="" placeholder="" type="password" class="input">
+                <span>Confirm password</span>
+            </label> -->
+            <button type="submit" class="submit">Login</button> 
+       
+      
+            <!-- <button class="submit">Submit</button> -->
+            <p class="signin">don't have an acount ?    <button type="button" class="submit1" onclick="openForm1()">register</button>
+            </p>
+        </form>
+    </div>
+    <div class="form-popup" id="myForm1">
+        <form class="form">
+        <button type="button" class="btn_cancel1" onclick="closeForm1()">X</button>
+    
+            <p class="title">Register </p>
+            <p class="message">Signup now and get full access to our app. </p>
+                <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>name</span>
+                </label>
+        
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>Lastname</span>
+                </label>
+            </div>  
+                    
+            <label>
+                <input required="" placeholder="" type="email" class="input">
+                <span>Email</span>
+            </label> 
+                
+            <label>
+                <input required="" placeholder="" type="password" class="input">
+                <span>Password</span>
+            </label>
+            <label>
+                <input required="" placeholder="" type="password" class="input">
+                <span>Confirm password</span>
+            </label>
+            
+        <button type="submit" class="submit">Register</button>
+      
+            <!-- <button class="submit">Submit</button> -->
+            <p class="signin">Already have an acount ?     <button type="button" class="submit1" onclick="openForm2()">Login</button>
+            </p>
+        </form>
+    </div>
+    
+    <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+          document.getElementById("myForm1").style.display = "none";
+        }
+        function openForm1() {
+          document.getElementById("myForm").style.display = "none";
+          document.getElementById("myForm1").style.display = "block";
+          
+        }
+        function openForm2() {
+          document.getElementById("myForm1").style.display = "none";
+          document.getElementById("myForm").style.display = "block";
+          
+        }
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+        function closeForm1() {
+          document.getElementById("myForm1").style.display = "none";
+        }
+        </script>
     <section id="hero">
         <h4>Ali Ahsan</h4>
         <h2>Web designer</h2>
@@ -40,7 +142,7 @@
         </div>
        
        
-        <button class="ui-btn">
+        <button class="ui-btn" id="about" >
             <span>
                 Hire Me
             </span>
@@ -63,7 +165,7 @@
 
             <div class="profile">
 
-                <div id="about"class="profile-image">
+                <div class="profile-image">
 
                     <img src="myimage1.jpg" alt="" width="200" height="200">
 
@@ -95,7 +197,7 @@
 
                 <div class="profile-bio">
 
-                    <p><span class="profile-real-name">Ali Ahsan</span> Lorem ipsum dolor sit amet consectetur
+                    <p><span class="profile-real-name" id="project">Ali Ahsan</span> Lorem ipsum dolor sit amet consectetur
                         adipisicing elit. Itaque mollitia voluptatibus perferendis facilis reiciendis, aspernatur
                         quibusdam delectus assumenda! Necessitatibus minus quia sapiente omnis accusamus asperiores ad
                         placeat suscipit quod corporis?</p>
@@ -166,8 +268,8 @@
 
             </div>
             <div class="pro">
-                <img src="project4.jpg" alt="">
-                <div class="des">
+                <img id="contact" src="project4.jpg" alt="">
+                <div class="des" >
                     <span>project 4</span>
                     <h5>Restruant web site</h5>
                     <span class="star active"></span>
@@ -189,8 +291,10 @@
         <h3 class="heading1">Conatct</h3>
         <h5 class="name">Contact info</h5>
         <h6  ><b class="green"> address:</b>1 121 Rock Sreet, 21 Avenue, New York, NY 92103-9000</h6><br><br>
-        <h6 ><b class="green"> phone</b>:+001 234 56 789</h6><br><br>
-        <h6 ><b class="green"> For reservations & private events:</b> enquiry@dream-theme.com</h6><br><br>
+        <h6 ><b class="green"> phone</b>:+92-3002408615</h6><br><br>
+        <h6 ><b class="green">Email: </b>syedaliahsan2002@gmail.com</h6><br><br>
+
+        <!-- <h6 ><b class="green"> For reservations & private events:</b> enquiry@dream-theme.com</h6><br><br> -->
         <h6 ><b class="green"> For all press enquiries:</b> media@dream-theme.com</h6><br><br>
         <h6 ><b class="green">For job applications:</b>hr@dream-theme.com</h6><br><br>
         
@@ -243,7 +347,7 @@
      
                <div  class="content">
           <div class="icon_group">
-            <a id="facebook" class="icon facebook" href="https://www.facebook.com/SyedAliAhsan2002" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i><div class="background_circle"></div></a>
+            <a id="face" class="icon facebook" href="https://www.facebook.com/SyedAliAhsan2002" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i><div class="background_circle"></div></a>
             <a id="twite" class="icon twitter" href="https://www.instagram.com/syedaliahsan2002/" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i><div class="background_circle"></div></a>
             <a id="insta" class="icon instagram" href="https://twitter.com/AliAhsa08911052" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i><div class="background_circle"></div></a>
             <a id="pin" class="icon pinterest" href="https://www.pinterest.com/syedaliahsan2002/" target="_blank"><i class="fa fa-pinterest-p fa-2x" aria-hidden="true"></i><div class="background_circle"></div></a></div>
@@ -253,6 +357,45 @@
     </div>
     ;
 </div></div>
+<script>
+    document.getElementById("face").addEventListener("mouseover",function(){
+    
+    document.getElementById("box").style.backgroundColor = "#3B5998"} );
+    // document.getElementById("box").style.transitionTimingFunction = "easeoin"
+    // document.getElementById("box").style.transitionDelay = "1s"
+
+// ,function () {
+//          document.getElementById("face").style.transitionTimingFunction = "easein";
+//          document.getElementById("face").style.transitionDelay = "1s";
+//       }
+    
+     
+    //   document.getElementById("face").addEventListener("mouseover",function(){
+    //     document.getElementById("box").style.transitionTimingFunction = "easein";
+    //     document.getElementById("box").style.transitionDelay = "1s";
+    //   });
+    document.getElementById("face").addEventListener("mouseout",function(){
+    
+    document.getElementById("box").style.backgroundColor = "#D5D5D5"});
+    document.getElementById("twite").addEventListener("mouseover",function(){
+    
+    document.getElementById("box").style.backgroundColor = "#55acee"});
+    document.getElementById("twite").addEventListener("mouseout",function(){
+    
+    document.getElementById("box").style.backgroundColor = "#D5D5D5"});
+    document.getElementById("insta").addEventListener("mouseover",function(){
+    
+    document.getElementById("box").style.backgroundColor = "#cd486b"});
+    document.getElementById("insta").addEventListener("mouseout",function(){
+    
+    document.getElementById("box").style.backgroundColor = "#D5D5D5"});
+    document.getElementById("pin").addEventListener("mouseover",function(){
+    
+    document.getElementById("box").style.backgroundColor = "#cb2027"});
+    document.getElementById("pin").addEventListener("mouseout",function(){
+    
+    document.getElementById("box").style.backgroundColor = "#D5D5D5"});
+</script>
 </section>
 
  <!-- <section id="contact">
@@ -315,8 +458,62 @@
             
             
               </div> -->
-  
- </section> 
+              
+              <div class="footer">
+                <footer>
+                  <div class="contant">
+                    <div class="left box">
+                      <div class="upper">
+                        <div class="topic">About us</div>
+                        <p><a href="#"><img src="logo.png" alt="" width="50px" height="50px"></a> is a site where we provide frontend projects based on HTML,
+                        CSS, and also JavaScript along with creative CSS Animations and Effects.</p>
+                      </div>
+                      <div class="lower">
+                        <div class="topic">Contact us</div>
+                        <div class="phone">
+                          <a href="#"></i>+92-3002408615</a>
+                        </div>
+                        <!-- <i class="fas fa-phone-volume"></i>
+                        <i class="fas fa-envelope"></i> -->
+                        <div class="email">
+
+                          <a href="mailto:syedaliahsan2002@gmail.com"></i>syedaliahsan2002gmail.com</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="middle box">
+                      <div class="topic">Our Services</div>
+                      <div><a href="#">Web Design, Development</a></div>
+                      <div><a href="#">Web UX Design, Reasearch</a></div>
+                      <div><a href="#">Web User Interface Design</a></div>
+                      <div><a href="#">Theme Development, Design</a></div>
+                      <div><a href="#">Mobile Application Design</a></div>
+                      <div><a href="#">Wire raming & Prototyping</a></div>
+                    </div>
+                    <div class="right box">
+                      <div class="topic">Subscribe us</div>
+                      <form action="#">
+                        
+                       <input type="text" placeholder="Enter email address"  ><br><br>
+                        <!-- <input type="submit" name="" value="Send"> -->
+                        <a class="cta1" href="#"><button class="cta1" style="width: 50%;">SEND</button></a>
+
+                        <!-- <div class="media-icons">
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                          <a href="#"><i class="fab fa-youtube"></i></a>
+                          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div> -->
+                      </form>
+                    </div>
+                  </div>
+                  <div class="bottom">
+                    <p>Copyright © 2020 <a href="#"><img src="logo.png" alt="" width="50px" height="50px"></a> All rights reserved</p>
+                  </div>
+                </footer>
+              </div>
+ 
 
 
 
@@ -503,7 +700,8 @@
 
                 
             </script>
-            
+             
+           
 </body>
 
 </html>
